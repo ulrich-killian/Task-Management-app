@@ -70,15 +70,15 @@ Server starts at `http://localhost:3000`
 
 ---
 
-## 🚦 API Endpoints
+##  API Endpoints
 
 Base URL: `https://task-management-app-vk0n.onrender.com`
 
-> 🔒 Protected routes require: `Authorization: Bearer <token>`
+>  Protected routes require: `Authorization: Bearer <token>`
 
 ---
 
-### 👤 Authentication
+###  Authentication
 
 | Method | Endpoint | Auth | Description |
 | :--- | :--- | :--- | :--- |
@@ -137,7 +137,7 @@ POST /api/user/login
 
 ---
 
-### ✅ Tasks
+###  Tasks
 
 | Method | Endpoint | Auth | Description |
 | :--- | :--- | :--- | :--- |
@@ -352,7 +352,7 @@ Only the **creator** can delete a task.
 
 ---
 
-## 🔄 Real World Test Flow
+##  Real World Test Flow
 
 A full end-to-end scenario using a CEO assigning tasks to mayors:
 
@@ -419,19 +419,19 @@ Authorization: Bearer <ceo_token>
 
 ---
 
-## 📊 Status Workflow
+##  Status Workflow
 
 ```
 [todo] ──→ [in-progress] ──→ [done]
               ↑________|
          (can go back to todo)
 
-[done] → ❌ no further changes allowed
+[done] →  no further changes allowed
 ```
 
 ---
 
-## 🗄 Database Schema
+##  Database Schema
 
 Three relational tables:
 
@@ -441,16 +441,10 @@ Three relational tables:
 
 ---
 
-## 🔮 Roadmap
+##  Roadmap
 
 - [ ] Email notifications when a task is assigned
 - [ ] Task comments and activity log
 - [ ] Team/group support
 - [ ] Swagger API documentation
 - [ ] Admin dashboard
-
----
-
-## 📄 License
-
-MIT License
