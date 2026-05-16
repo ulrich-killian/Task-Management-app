@@ -446,5 +446,5 @@ Three relational tables:
 - [ ] Email notifications when a task is assigned
 - [ ] Task comments and activity log
 - [ ] Team/group support
-- [ ] Swagger API documentation
+- [ ] Swagger API documentation [http]( http://localhost:3000/api-docs)
 - [ ] Admin dashboard
