@@ -446,5 +446,5 @@ Three relational tables:
 - [ ] Email notifications when a task is assigned
 - [ ] Task comments and activity log
 - [ ] Team/group support
-- [ ] Swagger API documentation [http]( hhttps://task-management-app-6s3f.onrender.com/api-docs)
+- [ ] Swagger API documentation  ( https://task-management-app-6s3f.onrender.com/api-docs )
 - [ ] Admin dashboard
