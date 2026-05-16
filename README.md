@@ -72,7 +72,7 @@ Server starts at `http://localhost:3000`
 
 ##  API Endpoints
 
-Base URL: `https://task-management-app-vk0n.onrender.com`
+Base URL: `https://task-management-app-6s3f.onrender.com/`
 
 >  Protected routes require: `Authorization: Bearer <token>`
 
@@ -446,5 +446,5 @@ Three relational tables:
 - [ ] Email notifications when a task is assigned
 - [ ] Task comments and activity log
 - [ ] Team/group support
-- [ ] Swagger API documentation [http]( http://localhost:3000/api-docs)
+- [ ] Swagger API documentation [http]( hhttps://task-management-app-6s3f.onrender.com/api-docs)
 - [ ] Admin dashboard
