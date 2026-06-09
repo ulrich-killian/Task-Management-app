@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cross-env NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand --detectOpenHandles",
     "build": " "
   },
   "keywords": [],
@@ -32,6 +32,9 @@
     "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "cross-env": "^10.1.0",
+    "jest": "^30.4.2",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.2.2"
   }
 }
