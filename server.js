@@ -9,7 +9,6 @@ import userRoutes from "./src/routes/userRoutes/userRoutes.js";
 import taskRoutes from "./src/routes/taskRoutes/taskRoutes.js";
 import { generalLimiter } from "./src/middleware/rateLimit.js";
 
-
 import { createTables } from './src/schema/query.js';   
 
 import swaggerUi from 'swagger-ui-express';
@@ -18,7 +17,6 @@ import swaggerSpec from './swagger.js';
 dotenv.config();
 
 const app = express();
-
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
   explorer: true,
@@ -45,20 +43,24 @@ app.get("/", (req, res) => {
   res.send("Server is running live");
 });
 
-const startServer = async () => {
-  try {
-    await testConnection();
-    await createTables();        
-  
+if (process.env.NODE_ENV !== 'test') {
+  const startServer = async () => {
+    try {
+      await testConnection();
+      await createTables();        
+    
+      app.listen(port, () => {
+        console.log(`Server running on http://localhost:${port}`);
+        console.log(` Swagger UI: http://localhost:${port}/api-docs`);
+      });
+    } catch (error) {
+      console.error("Failed to start server:", error);
+      process.exit(1);
+    }
+  };
 
-    app.listen(port, () => {
-      console.log(` Server running on http://localhost:${port}`);
-      console.log(` Swagger UI: http://localhost:${port}/api-docs`);
-    });
-  } catch (error) {
-    console.error("Failed to start server:", error);
-    process.exit(1);
-  }
-};
+  startServer();
+}
 
-startServer();
+
+export default app;
